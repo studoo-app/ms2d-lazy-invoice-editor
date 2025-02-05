@@ -1,0 +1,14 @@
+services:
+  dev-server:
+    container_name: pwdGen-dev-server
+    build: .
+    tty: true
+    volumes:
+      - ./app:/app
+
+  test-server:
+    container_name: test-server
+    image: debian:12
+    tty: true
+    volumes:
+      - ./share:/root/share
